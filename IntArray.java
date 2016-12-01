@@ -9,11 +9,36 @@ public class IntArray {
 
     public static void print2d(int[][] a) {
 
+        String dashes = "";
+
+        int width = a[0].length;
+    
+        for (int i =0; i < width; i++)
+            dashes += "----";
+                 
+
+
+
+        System.out.println(dashes);
+
         for (int row = 0; row < a.length; row++) {
             for (int column = 0; column < a[row].length; column++) {
-                System.out.print(a[row][column] + " "); }
-                System.out.println();
-    }}
+                
+                if (a[row][column] > 9)
+                    System.out.print("|" + a[row][column] + " ");
+                if (a[row][column] < 10)
+                    System.out.print("| " + a[row][column] + " ");
+                if (column == a.length-1)
+                    System.out.println("|"); }
+
+                
+                
+                 System.out.println(dashes);
+                
+                
+                 } 
+               
+    }
 
 
     public static int[][] printSquareArray() {
@@ -33,15 +58,8 @@ public class IntArray {
             for (int col = 0; col < newArray[row].length; col++) {
                 newArray[row][col] = count; 
                 count += 1; }
-        return newArray; 
-
-     
-    
-
-    }
+        return newArray; }
+        
 }
 
-
-//int[] ns = new int[6]; 
-//int[][] grid = new int[3][4]; 
 
